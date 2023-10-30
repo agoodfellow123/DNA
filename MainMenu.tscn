@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://btwksx0wbthqb"]
+
+[ext_resource type="Script" path="res://start_game.gd" id="1_ddi0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_807t2"]
+
+[sub_resource type="FontVariation" id="FontVariation_5glvh"]
+spacing_bottom = -19
+
+[sub_resource type="FontVariation" id="FontVariation_x6r5i"]
+variation_embolden = 1.0
+spacing_top = -13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36wmp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7v2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4luv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5g12g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.0
+offset_right = 187.0
+offset_bottom = 648.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_807t2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -89.0
+offset_right = 62.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleDNA" type="Label" parent="Menu panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource("FontVariation_5glvh")
+theme_override_font_sizes/font_size = 58
+text = "D&A"
+
+[node name="Label" type="Label" parent="Menu panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Heroes Awoken"
+
+[node name="Label2" type="Label" parent="Menu panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_x6r5i")
+text = "_______________________________________"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="NewSes" type="Button" parent="Menu panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_36wmp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s7v2k")
+text = "New Session"
+flat = true
+script = ExtResource("1_ddi0j")
+
+[node name="LoadSes" type="Button" parent="Menu panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j4luv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5g12g")
+disabled = true
+text = "Load Session"
+flat = true
+
+[connection signal="pressed" from="Menu panel/VBoxContainer/VBoxContainer/NewSes" to="Menu panel/VBoxContainer/VBoxContainer/NewSes" method="_on_pressed"]

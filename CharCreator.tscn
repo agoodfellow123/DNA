@@ -1,0 +1,302 @@
+[gd_scene load_steps=6 format=3 uid="uid://bftl8jqgfahb0"]
+
+[ext_resource type="Script" path="res://CharCreator.gd" id="1_w4wm5"]
+
+[sub_resource type="FontVariation" id="FontVariation_xnmli"]
+variation_embolden = 0.75
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wip3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6swyr"]
+
+[sub_resource type="FontVariation" id="FontVariation_qatug"]
+variation_embolden = 1.0
+spacing_bottom = 7
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w4wm5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_xnmli")
+text = "CLASS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 23
+
+[node name="WarBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "Warrior"
+flat = true
+
+[node name="RanBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "Ranger"
+flat = true
+
+[node name="MagBtn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "Mage"
+flat = true
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_qatug")
+text = "________________________________________"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_xnmli")
+text = "SKILLS"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Skill points remaining:"
+
+[node name="SkllPntsLbl" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "30"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StrMinu" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "-"
+flat = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Strength:"
+
+[node name="StrLbl" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "10"
+
+[node name="StrPlus" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "+"
+flat = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="DexMinu" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "-"
+flat = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Dexterity:"
+
+[node name="DexLbl" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "10"
+
+[node name="DexPlus" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "+"
+flat = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="IntMinu" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "-"
+flat = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Intelligence:"
+
+[node name="IntLbl" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "10"
+
+[node name="IntPlus" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "+"
+flat = true
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ChrMinu" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "-"
+flat = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "Charisma:"
+
+[node name="ChrLbl" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "10"
+
+[node name="ChrPlus" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "+"
+flat = true
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_qatug")
+text = "________________________________________"
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("FontVariation_xnmli")
+text = "Abilities"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 23
+
+[node name="Abl1" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+tooltip_text = "Active/Continuous: As long as you recieve or give damage in every turn, get +(str/5) damage in your melee attacks"
+mouse_filter = 1
+mouse_default_cursor_shape = 16
+text = "Rage"
+
+[node name="Abl2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+tooltip_text = "Passive: Melee attacks against you gets -2 in damage"
+mouse_filter = 1
+mouse_default_cursor_shape = 16
+text = "Toughness"
+
+[node name="PrcBtn" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.311732, 0.439612, 1, 1)
+theme_override_colors/font_hover_color = Color(0.177969, 0.137222, 1, 1)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wip3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6swyr")
+text = "Proceed"
+flat = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/WarBtn" to="." method="_on_war_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/RanBtn" to="." method="_on_ran_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/MagBtn" to="." method="_on_mag_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/StrMinu" to="." method="_on_str_minu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/StrPlus" to="." method="_on_str_plus_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/DexMinu" to="." method="_on_dex_minu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/DexPlus" to="." method="_on_dex_plus_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/IntMinu" to="." method="_on_int_minu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/IntPlus" to="." method="_on_int_plus_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/ChrMinu" to="." method="_on_chr_minu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/ChrPlus" to="." method="_on_chr_plus_pressed"]
+[connection signal="pressed" from="MarginContainer/PrcBtn" to="." method="_on_prc_btn_pressed"]
